@@ -20,7 +20,7 @@ cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmma
 
 //以上是配置说明
 const $iosrule = iosrule();//声明必须
-
+const Notice=30;//设置运行多少次通知一次
 
 
 //====================================
@@ -396,12 +396,10 @@ formatSeconds(value) {
   }
 
 
-/*
-以下为通知已注释
 function papa(x,y,z){
 
  $iosrule.notify(x,y,z);}
-*/
+
 function sign(code)  
 {  
    code=unescape(code);  
