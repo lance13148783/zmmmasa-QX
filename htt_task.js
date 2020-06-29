@@ -395,9 +395,9 @@ formatSeconds(value) {
   }
 
 
-function papa(x,y,z){
+#function papa(x,y,z){
 
- $iosrule.notify(x,y,z);}
+# $iosrule.notify(x,y,z);}
 
 function sign(code)  
 {  
