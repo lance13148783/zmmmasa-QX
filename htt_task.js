@@ -2,7 +2,7 @@
 邀请码:97593577
 by红鲤鱼与绿鲤鱼与驴
 2020.6.27
-本版本已更改运行30次通知一次
+本版本阉割通知
 为方便上传git库 
 #惠头条签到定时执行任务，因为有阅读，视频和小视频三个奖励，建议2分钟以上频率.
 
@@ -20,7 +20,7 @@ cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmma
 
 //以上是配置说明
 const $iosrule = iosrule();//声明必须
-const Notice=30;//设置运行多少次通知一次
+
 
 
 //====================================
@@ -395,11 +395,11 @@ formatSeconds(value) {
     return res;
   }
 
-
+/*
 function papa(x,y,z){
 
  $iosrule.notify(x,y,z);}
-
+*/
 function sign(code)  
 {  
    code=unescape(code);  
