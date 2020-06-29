@@ -8,11 +8,11 @@
 获取ck完毕可以禁止该js
 #惠头条签到获取Qx
 
-https:\/\/api\.cashtoutiao\.com url script-request-body htt_cookie.js
+https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubusercontent.com/zmmmasa/QX/master/htt_cookie.js
 
 #惠头条签到获取ckloon
 
-http-request https:\/\/api\.cashtoutiao\.com script-path=htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK
+http-request https:\/\/api\.cashtoutiao\.com script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK
 
 ====================================
 
