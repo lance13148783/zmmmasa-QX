@@ -12,6 +12,6 @@ hostname= api.cashtoutiao.com
 
 #loon 
 #两条  获取 签到 新闻 视频 小视频 时段奖励5个ck 时段奖励必须最后获取 之后注释掉
-cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/b70f339cb7aa25f754ddc6a578fb65f38c8c8770/htt_task.js, tag=惠头条
-http-request https:\/\/api\.cashtoutiao\.com script-path=https://raw.githubusercontent.com/zmmmasa/QX/b70f339cb7aa25f754ddc6a578fb65f38c8c8770/htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK-
+cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条
+http-request https:\/\/api\.cashtoutiao\.com script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK-
 MITM=api.cashtoutiao.com
