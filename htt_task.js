@@ -14,7 +14,7 @@ by红鲤鱼与绿鲤鱼与驴
 
 
 loon定时格式参考
-cron "0 21,31,50 0-22 * * ?" script-path=htt_task.js, tag=惠头条
+cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条
 */
 
 
@@ -396,7 +396,9 @@ formatSeconds(value) {
   }
 
 
-/*function papa(x,y,z){
+/*
+以下为通知已注释
+function papa(x,y,z){
 
  $iosrule.notify(x,y,z);}
 */
