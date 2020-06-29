@@ -8,10 +8,12 @@ https:\/\/api\.cashtoutiao\.com url script-request-body https://raw.githubuserco
 #惠头条 时间可更改 推荐大于2分钟
 [server_local]
 0 */3 0-22 * * * https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条, enabled=true
+#添加hostname
 hostname= api.cashtoutiao.com
 
 #loon 
 #两条  获取 签到 新闻 视频 小视频 时段奖励5个ck 时段奖励必须最后获取 之后注释掉
 cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条
 http-request https:\/\/api\.cashtoutiao\.com script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK-
+#添加主机名
 MITM=api.cashtoutiao.com
