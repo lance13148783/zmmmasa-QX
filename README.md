@@ -15,7 +15,7 @@ hostname= api.cashtoutiao.com
 #以下为loon 
 #添加到[Script]模块下
 #两条  获取 签到 新闻 视频 小视频 时段奖励5个ck 时段奖励必须最后获取 之后注释掉
-cron "0 21,31,50 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条
+cron "0 */3 0-22 * * *" script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_task.js, tag=惠头条
 http-request https:\/\/api\.cashtoutiao\.com script-path=https://raw.githubusercontent.com/zmmmasa/QX/master/htt_cookie.js, requires-body=true, timeout=30, tag=惠头条CK-
 #添加主机名
 MITM=api.cashtoutiao.com
