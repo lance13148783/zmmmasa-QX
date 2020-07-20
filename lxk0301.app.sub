@@ -142,7 +142,10 @@
         "jd_plant_bean_name",
         "jd_plantBean1",
         "jd_plantBean2",
-        "jd_plantBean3"
+        "jd_plantBean3",
+        "jd_plantBean4",
+        "jd_plantBean5",
+        "jd_plantBean6"
       ],
       "settings": [
         {
