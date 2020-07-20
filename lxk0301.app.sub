@@ -180,6 +180,27 @@
           "type": "text",
           "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
         }
+       {
+          "id": "jd_plantBean4",
+          "name": "@2互助码1",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        }
+        {
+          "id": "jd_plantBean5",
+          "name": "@2互助码2",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        }
+        {
+          "id": "jd_plantBean6",
+          "name": "@2互助码3",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        }
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
