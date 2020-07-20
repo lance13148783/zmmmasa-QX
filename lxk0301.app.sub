@@ -158,6 +158,41 @@
           "val": "",
           "type": "text",
           "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet6",
+          "name": "互助码2-1",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet7",
+          "name": "互助码2-2",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet8",
+          "name": "互助码2-3",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet9",
+          "name": "互助码2-4",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet10",
+          "name": "互助码2-5",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
         }
       ],
       "author": "@lxk0301",
