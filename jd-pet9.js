@@ -16,7 +16,7 @@ const name = '东东萌宠';
 const $ = new Env(name);
 const Key = '';//单引号内自行填写您抓取的京东Cookie
 //直接用NobyDa的jd cookie
-const cookie =  Key ? Key : $.getdata('CookieJD');
+const cookie =  Key ? Key : $.getdata('CookieJD2');
 //京东接口地址
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 let jdNotify = $.getdata('jdPetNotify');
@@ -32,7 +32,7 @@ let shareCodes = [ // 这个列表填入你要助力的好友的shareCode, 最�
 // 1️⃣脚本也可以远程挂载了。助力功能只需在box里面设置助力码。
 // 2️⃣所有脚本的cookie都可以备份，方便你迁移到其他支持box的软件。
 let isBox = false //默认没有使用box
-const boxShareCodeArr = ['jd_pet1', 'jd_pet2', 'jd_pet3', 'jd_pet4', 'jd_pet5'];
+const boxShareCodeArr = ['jd_pet6', 'jd_pet7', 'jd_pet8', 'jd_pet9', 'jd_pet10'];
 isBox = boxShareCodeArr.some((item) => {
   const boxShareCode = $.getdata(item);
   return (boxShareCode !== undefined && boxShareCode !== null && boxShareCode !== '');
