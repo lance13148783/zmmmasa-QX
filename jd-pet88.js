@@ -14,7 +14,7 @@ cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/nzw9314/Quan
 */
 const name = '东东萌宠';
 const $ = new Env(name);
-const cookie = 'pt_key=AAJe6Wb3ADDIbzTD2P5OFGJ_5i8R49acXlLq9WvPMzQHnTRPNwmpdgIkfRDIbz-fZdEjP3F7VLo;pt_pin=jd_QEVVkkDTQAlJ';//单引号内自行填写您抓取的京东Cookie
+const cookie = 'pt_key=AAJfF_hPADD_rXzKS3ZSyFbMomwEsXpHfT6mRlHthGFbOKoGjE1F9us32O3Y7mLYl32f-htkg0w;pt_pin=62001345-279873';//单引号内自行填写您抓取的京东Cookie
 //直接用NobyDa的jd cookie
 //const cookie =  Key ? Key : $.getdata('CookieJD2');
 //京东接口地址
