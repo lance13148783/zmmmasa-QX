@@ -1864,8 +1864,8 @@ function GetCookie() {
       var CV = $request.headers['Cookie']
       if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
         var CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/)
-        var CK1 = $nobyda.read("CookieJD")
-        var CK2 = $nobyda.read("CookieJD2")
+        var CK1 = $nobyda.read("CookieJD3")
+        var CK2 = $nobyda.read("CookieJD4")
         var AccountOne = CK1 ? CK1.match(/pt_pin=.+?;/) ? CK1.match(/pt_pin=(.+?);/)[1] : null : null
         var AccountTwo = CK2 ? CK2.match(/pt_pin=.+?;/) ? CK2.match(/pt_pin=(.+?);/)[1] : null : null
         var UserName = CookieValue.match(/pt_pin=(.+?);/)[1]
