@@ -20,3 +20,4 @@
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/jd.png", "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"]
   }]
 }
+    { id: 'txnews魔改', name: '腾讯新闻魔改', keys: ['sy_signurl_txnews', 'sy_cookie_txnews', 'sy_signurl_txnews2', 'sy_cookie_txnews2' 'sy_signurl_txnews3', 'sy_cookie_txnews3'], author: '@Sunert', repo: 'https://github.com/Sunert/Scripts/blob/master/Task/txnews.js', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png', 'https://raw.githubusercontent.com/Orz-3/task/master/txnews.png'] },
