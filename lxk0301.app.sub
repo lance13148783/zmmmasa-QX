@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "jd_fruit",
-      "name": "东东农场",
+      "name": "东东农场修改版",
       "keys": [
         "jd_fruit_name",
         "jd_fruit1",
@@ -100,7 +100,7 @@
     },
     {
       "id": "jd_pet",
-      "name": "东东萌宠",
+      "name": "东东萌宠修改版",
       "keys": [
         "jd_pet_name",
         "jd_pet1",
@@ -209,7 +209,7 @@
     },
     {
       "id": "jd_plantBean",
-      "name": "京东种豆",
+      "name": "京东种豆修改版",
       "keys": [
         "jd_plant_bean_name",
         "jd_plantBean1",
@@ -286,7 +286,7 @@
     },
     {
       "id": "jd_MoneyTree",
-      "name": "宠汪汪",
+      "name": "宠汪汪修改版",
       "keys": [
         "jd_joy_name"
       ],
@@ -344,7 +344,7 @@
     },
     {
       "id": "jd_Speed",
-      "name": "京东天天加速",
+      "name": "京东天天加速修改版",
       "keys": [
         "jd_speed_name"
       ],
