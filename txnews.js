@@ -73,7 +73,7 @@ async function all()
   await lookVideo();
   await openApp();
   await shareApp();
-  await Redpack();
+//  await Redpack();
   await videoPack();
   await StepsTotal();
   await getTotal();
@@ -230,7 +230,7 @@ return new Promise((resolve, reject) => {
        })
    })
 }
-
+*/
 function videoPack() {
   const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
 return new Promise((resolve, reject) => {
@@ -256,7 +256,6 @@ return new Promise((resolve, reject) => {
       })
    })
 }
-*/
 //收益总计
 function getTotal() {
 return new Promise((resolve, reject) => {
