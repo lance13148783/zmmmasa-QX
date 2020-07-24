@@ -73,8 +73,8 @@ async function all()
   await lookVideo();
   await openApp();
   await shareApp();
-//  await Redpack();
-//  await videoPack();
+  await Redpack();
+  await videoPack();
   await StepsTotal();
   await getTotal();
   await showmsg();
