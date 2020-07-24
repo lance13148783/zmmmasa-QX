@@ -5,8 +5,8 @@
   "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png",
   "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
   "apps": [{
-    "id": "多合一签到修改版",
-    "name": "京东修改版",
+    "id": "txnews修改版",
+    "name": "腾讯新闻修改版",
     "keys": ["sy_signurl_txnews", "sy_cookie_txnews", "sy_signurl_txnews2", "sy_cookie_txnews2", "sy_signurl_txnews3", "sy_cookie_txnews3"],
     "author": "改自@chavy",
     "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
