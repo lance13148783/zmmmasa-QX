@@ -73,7 +73,7 @@ async function all()
   await openApp();
   await shareApp();
 //  await Redpack();
-//  await videoPack();
+  await videoPack();
   await StepsTotal();
   await getTotal();
   await showmsg();
@@ -202,58 +202,59 @@ return new Promise((resolve, reject) => {
     resolve()
    })
 }
+/*
 //阶梯红包到账
-//function Redpack() {
-//   ID = signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
-//return new Promise((resolve, reject) => {
-//  const cashUrl = {
-//    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
-//    headers: {Cookie: cookieVal},
-//    body: `redpack_type=article&activity_id=${actid}`
-//  }
-//   sy.post(cashUrl, (error, response, data) => {
-//    if(logs)sy.log(`${cookieName}阅读红包- data: ${data}`)
-//        let rcash = JSON.parse(data)
-//            readredpack = Number()
- //           redpackres = ``
-  //      if (rcash.ret == 0){
-    //   for (i=0;i<rcash.data.award.length;i++){
-      //  readredpack += rcash.data.award[i].num/100
-        //    }
-//       if(readredpack!=0){
-  //     redpackres += `【阅读红包】到账`+readredpack+`元 🌷\n` 
-    //       }
-      //   }
- //    resolve()
- //      })
-//   })
-//}
-
-//function videoPack() {
-//  const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
-//return new Promise((resolve, reject) => {
-//  const cashUrl = {
-//    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
-//    headers: {Cookie: cookieVal},
-//    body: `redpack_type=video&activity_id=${actid}`
-//  }
-//    sy.post(cashUrl, (error, response, data) => {
-//    if(logs)sy.log(`${cookieName}视频红包-data:${data}`)
-//        let vcash = JSON.parse(data)
-//            redpackres = ``
-//            videoredpack = Number()
-//        if (vcash.ret == 0){
-//       for (i=0;i<vcash.data.award.length;i++){
-//        videoredpack += vcash.data.award[i].num/100
-//            }
-//       if(videoredpack!=0){
-//        redpackres += `【视频红包】到账`+videoredpack+`元 🌷\n` 
-//          }
-//         }
-//     resolve()
-//      })
-//   })
-//}
+function Redpack() {
+   ID = signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
+return new Promise((resolve, reject) => {
+  const cashUrl = {
+    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
+    headers: {Cookie: cookieVal},
+    body: `redpack_type=article&activity_id=${actid}`
+  }
+   sy.post(cashUrl, (error, response, data) => {
+    if(logs)sy.log(`${cookieName}阅读红包- data: ${data}`)
+        let rcash = JSON.parse(data)
+            readredpack = Number()
+            redpackres = ``
+        if (rcash.ret == 0){
+       for (i=0;i<rcash.data.award.length;i++){
+        readredpack += rcash.data.award[i].num/100
+            }
+       if(readredpack!=0){
+       redpackres += `【阅读红包】到账`+readredpack+`元 🌷\n` 
+           }
+         }
+     resolve()
+       })
+   })
+}
+*/
+function videoPack() {
+  const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
+return new Promise((resolve, reject) => {
+  const cashUrl = {
+    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
+    headers: {Cookie: cookieVal},
+    body: `redpack_type=video&activity_id=${actid}`
+  }
+    sy.post(cashUrl, (error, response, data) => {
+    if(logs)sy.log(`${cookieName}视频红包-data:${data}`)
+        let vcash = JSON.parse(data)
+            redpackres = ``
+            videoredpack = Number()
+        if (vcash.ret == 0){
+       for (i=0;i<vcash.data.award.length;i++){
+        videoredpack += vcash.data.award[i].num/100
+             }
+       if(videoredpack!=0){
+        redpackres += `【视频红包】到账`+videoredpack+`元 🌷\n` 
+          }
+         }
+     resolve()
+      })
+   })
+}
 
 //收益总计
 function getTotal() {
@@ -296,7 +297,7 @@ return new Promise((resolve, reject) => {
 function showmsg() {
  return new Promise((resolve, reject) => {
   if(readnum&&videonum){
-     detail = signinfo+redpackres + `【文章阅读】已读/再读: `+ readnum +`/`+readtitle+` 篇\n`+`【阅读红包】已开/总计: `+openreadred+`/`+readredtotal+` 个🧧\n`+ `【观看视频】已看/再看: `+ videonum +`/`+videotitle+` 分钟\n`+`【视频红包】已开/总计: `+openvideored+`/`+videoredtotal+` 个🧧\n【每日一句】`+Dictum 
+   detail = signinfo+`` + `【文章阅读】已读/再读: `+ readnum +`/`+readtitle+` 篇\n`+`【阅读红包】已开/总计: `+openreadred+`/`+readredtotal+` 个🧧\n`+ `【观看视频】已看/再看: `+ videonum +`/`+videotitle+` 分钟\n`+`【视频红包】已开/总计: `+openvideored+`/`+videoredtotal+` 个🧧\n【每日一句】`+Dictum
   }
   sy.log(subTile+`\n`+detail)
    if
