@@ -230,31 +230,31 @@ return new Promise((resolve, reject) => {
 //   })
 //}
 
-//function videoPack() {
-//  const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
-//return new Promise((resolve, reject) => {
+function videoPack() {
+  const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
+return new Promise((resolve, reject) => {
   const cashUrl = {
     url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
     headers: {Cookie: cookieVal},
     body: `redpack_type=video&activity_id=${actid}`
   }
-//    sy.post(cashUrl, (error, response, data) => {
-//    if(logs)sy.log(`${cookieName}视频红包-data:${data}`)
-//        let vcash = JSON.parse(data)
-//            redpackres = ``
-//            videoredpack = Number()
-//        if (vcash.ret == 0){
-//       for (i=0;i<vcash.data.award.length;i++){
-//        videoredpack += vcash.data.award[i].num/100
-//             }
-//       if(videoredpack!=0){
-//        redpackres += `【视频红包】到账`+videoredpack+`元 🌷\n` 
-//          }
-//         }
-//     resolve()
-//      })
-//   })
-//}
+    sy.post(cashUrl, (error, response, data) => {
+    if(logs)sy.log(`${cookieName}视频红包-data:${data}`)
+        let vcash = JSON.parse(data)
+            redpackres = ``
+            videoredpack = Number()
+        if (vcash.ret == 0){
+       for (i=0;i<vcash.data.award.length;i++){
+        videoredpack += vcash.data.award[i].num/100
+             }
+       if(videoredpack!=0){
+        redpackres += `【视频红包】到账`+videoredpack+`元 🌷\n` 
+          }
+         }
+     resolve()
+      })
+   })
+}
 
 //收益总计
 function getTotal() {
