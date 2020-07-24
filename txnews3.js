@@ -1,3 +1,27 @@
+/*
+更新时间: 2020-07-12 22:40
+腾讯新闻签到修改版，可以自动阅读文章获取红包，该活动为瓜分百万现金挑战赛，针对幸运用户参与
+获取Cookie方法:
+1.把以下配置复制到响应配置下
+2.打开腾讯新闻app，阅读几篇文章，倒计时结束后即可获取阅读Cookie;
+3.看一次推荐视频获取视频地址
+4.可能腾讯有某些限制，有些号码无法领取红包，手动阅读几篇，能领取红包，一般情况下都是正常的，
+5.此脚本根据视频红包数开启通知，默认4个红包一次，此版本和另一版本相同
+版本更新日志:
+1.01 修复无法自动获取视频红包，修改通知为视频红包到账通知间隔，即有红包到账且红包数除以间隔余0时通知，或者自定义常开或常关，
+---------------------
+Surge 4.0
+[Script]
+腾讯新闻 = type=cron,cronexp=0 8 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js,script-update-interval=0
+腾讯新闻 = type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js, requires-body=true
+~~~~~~~~~~~~~~~~~~~~~
+Loon 2.1.0+
+[Script]
+# 本地脚本
+cron "04 00 * * *" script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js, enabled=true, tag=腾讯新闻
+http-request https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js, requires-body=true
+-----------------
+QX 1.0.7+ :
 [task_local]
 0 9 * * * txnews3.js, tag=腾讯新闻
  [rewrite_local]
