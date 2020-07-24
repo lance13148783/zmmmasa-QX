@@ -73,8 +73,8 @@ async function all()
   await lookVideo();
   await openApp();
   await shareApp();
-  await Redpack();
-  await videoPack();
+//  await Redpack();
+//  await videoPack();
   await StepsTotal();
   await getTotal();
   await showmsg();
@@ -204,31 +204,31 @@ return new Promise((resolve, reject) => {
    })
 }
 //阶梯红包到账
-//function Redpack() {
-//   ID = signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
-//return new Promise((resolve, reject) => {
-//  const cashUrl = {
-//    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
-//    headers: {Cookie: cookieVal},
-//    body: `redpack_type=article&activity_id=${actid}`
-//  }
-//   sy.post(cashUrl, (error, response, data) => {
-//    if(logs)sy.log(`${cookieName}阅读红包- data: ${data}`)
-//       let rcash = JSON.parse(data)
-//            readredpack = Number()
-//            redpackres = ``
-//        if (rcash.ret == 0){
-//       for (i=0;i<rcash.data.award.length;i++){
-//        readredpack += rcash.data.award[i].num/100
-//            }
-//       if(readredpack!=0){
-//       redpackres += `【阅读红包】到账`+readredpack+`元 🌷\n` 
-//           }
-//         }
-//     resolve()
-//       })
-//   })
-//}
+function Redpack() {
+   ID = signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
+return new Promise((resolve, reject) => {
+  const cashUrl = {
+    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
+    headers: {Cookie: cookieVal},
+    body: `redpack_type=article&activity_id=${actid}`
+  }
+   sy.post(cashUrl, (error, response, data) => {
+    if(logs)sy.log(`${cookieName}阅读红包- data: ${data}`)
+       let rcash = JSON.parse(data)
+            readredpack = Number()
+            redpackres = ``
+        if (rcash.ret == 0){
+       for (i=0;i<rcash.data.award.length;i++){
+        readredpack += rcash.data.award[i].num/100
+            }
+       if(readredpack!=0){
+       redpackres += `【阅读红包】到账`+readredpack+`元 🌷\n` 
+           }
+         }
+     resolve()
+       })
+   })
+}
 
 function videoPack() {
   const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
