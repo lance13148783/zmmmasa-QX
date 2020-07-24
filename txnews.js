@@ -233,11 +233,11 @@ return new Promise((resolve, reject) => {
 //function videoPack() {
 //  const ID =  signurlVal.match(/devid=[a-zA-Z0-9_-]+/g)
 //return new Promise((resolve, reject) => {
-//  const cashUrl = {
-//    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
-//    headers: {Cookie: cookieVal},
-//    body: `redpack_type=video&activity_id=${actid}`
-//  }
+  const cashUrl = {
+    url: `https://api.inews.qq.com/activity/v1/activity/redpack/get?isJailbreak=0&${ID}`,
+    headers: {Cookie: cookieVal},
+    body: `redpack_type=video&activity_id=${actid}`
+  }
 //    sy.post(cashUrl, (error, response, data) => {
 //    if(logs)sy.log(`${cookieName}视频红包-data:${data}`)
 //        let vcash = JSON.parse(data)
