@@ -2,7 +2,7 @@
   "id": "Air-txnews.app.sub",
   "name": "txnews脚本订阅修改版",
   "author": "改自@chavybox",
-  "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png",
+  "icon": "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png",
   "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
   "apps": [{
     "id": "txnews修改版",
