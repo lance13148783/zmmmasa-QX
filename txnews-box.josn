@@ -10,6 +10,6 @@
     "keys": ["sy_signurl_txnews", "sy_cookie_txnews", "sy_signurl_txnews2", "sy_cookie_txnews2", "sy_signurl_txnews3", "sy_cookie_txnews3"],
     "author": "改自@chavybox",
     "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
-    "icons": ["https://raw.githubusercontent.com/zmmmasa/QX/master/txnews.josn", "https://raw.githubusercontent.com/zmmmasa/QX/master/txnews.josn"]
+    "icons": ["https://raw.githubusercontent.com/Orz-3/task/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"]
   }]
 }
