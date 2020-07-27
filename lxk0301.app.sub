@@ -17,7 +17,8 @@
         "jd_fruit5",
         "jd_fruit6",
         "jd_fruit7",
-        "jd_fruit8"
+        "jd_fruit8",
+        "notifyInterval"
       ],
       "settings": [
         {
@@ -86,6 +87,13 @@
         {
           "id": "jd_fruit8",
           "name": "互助码2-4",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "notifyInterval",
+          "name": "中青",
           "val": "",
           "type": "text",
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
