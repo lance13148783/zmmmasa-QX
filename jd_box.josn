@@ -17,6 +17,17 @@
     }],
     "author": "改自@NobyDa",
     "repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
+    "script"："https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js",
+      "scripts": [
+        {
+          "name": "多签1",
+          "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
+        },
+        {
+          "name": "多签2",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/JD2.js"
+        }
+      ],
     "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/jd.png", "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"]
   }]
 }
