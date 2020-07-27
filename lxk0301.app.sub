@@ -93,22 +93,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
-      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
       "scripts": [
         {
-          "name": "账号一京东水果",
-          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js"
+          "name": "百度签到",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
         },
         {
-          "name": "账号二京东水果",
-          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js"
+          "name": "什么值得买",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
         }
       ],
-      "icons": [
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png",
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png"
-      ]
-    },
     {
       "id": "jd_pet",
       "name": "东东萌宠修改版",
@@ -213,22 +208,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
-      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
       "scripts": [
         {
-          "name": "账号一京东萌宠",
-          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js"
+          "name": "百度签到",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
         },
         {
-          "name": "账号二京东萌宠",
-          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js"
+          "name": "什么值得买",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
         }
       ],
-      "icons": [
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png",
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png"
-      ]
-    },
     {
       "id": "jd_plantBean",
       "name": "京东种豆修改版",
@@ -301,22 +291,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
-      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
       "scripts": [
         {
-          "name": "账号一京东种豆",
-          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBend.js"
+          "name": "百度签到",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
         },
         {
-          "name": "账号二京东种豆",
-          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBend2.js"
+          "name": "什么值得买",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
         }
       ],
-      "icons": [
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png",
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png"
-      ]
-    },
     {
       "id": "jd_MoneyTree",
       "name": "宠汪汪修改版",
@@ -399,15 +384,15 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
-      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
+      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
       "scripts": [
         {
-          "name": "账号一京东加速",
-          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js"
+          "name": "百度签到",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
         },
         {
-          "name": "账号二京东加速",
-          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js"
+          "name": "什么值得买",
+          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
         }
       ],
       "icons": [
