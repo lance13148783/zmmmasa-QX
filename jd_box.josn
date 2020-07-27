@@ -17,14 +17,14 @@
     }],
     "author": "改自@NobyDa",
     "repo": "https://github.com/NobyDa/Script/tree/master/JD-DailyBonus",
-    "script"："https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js",
+    "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js",
       "scripts": [
         {
-          "name": "多签1",
+          "name": "京东1",
           "script": "https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js"
         },
         {
-          "name": "多签2",
+          "name": "京东2",
           "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/JD2.js"
         }
       ],
