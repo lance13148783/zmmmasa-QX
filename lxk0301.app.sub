@@ -93,17 +93,11 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
-      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
-      "scripts": [
-        {
-          "name": "百度签到",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
-        },
-        {
-          "name": "什么值得买",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
-        }
-      ],
+       "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
+        "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_fruit.png"
+      ]
+    },
     {
       "id": "jd_pet",
       "name": "东东萌宠修改版",
@@ -208,17 +202,11 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
-      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
-      "scripts": [
-        {
-          "name": "百度签到",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
-        },
-        {
-          "name": "什么值得买",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
-        }
-      ],
+       "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/jdmc_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png"
+      ]
+    },
     {
       "id": "jd_plantBean",
       "name": "京东种豆修改版",
@@ -291,17 +279,6 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
-      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
-      "scripts": [
-        {
-          "name": "百度签到",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
-        },
-        {
-          "name": "什么值得买",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
-        }
-      ],
     {
       "id": "jd_MoneyTree",
       "name": "宠汪汪修改版",
@@ -384,17 +361,6 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
-      "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js",
-      "scripts": [
-        {
-          "name": "百度签到",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js"
-        },
-        {
-          "name": "什么值得买",
-          "script": "https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js"
-        }
-      ],
       "icons": [
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png",
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png"
