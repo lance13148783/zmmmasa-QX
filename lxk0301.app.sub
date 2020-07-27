@@ -1,19 +1,15 @@
 {
-  "id": "lxk0301.app.sub",
-  "name": "lxk0301脚本订阅修改版",
-  "author": "@lxk0301-001",
+  "id": "lxk0301.app.sub2",
+  "name": "lxk0301脚本订阅2",
+  "author": "@lxk0301",
   "icon": "https://avatars0.githubusercontent.com/u/21308593?s=52&v=4",
   "repo": "https://gitee.com/lxk0301/scripts/",
   "apps": [
     {
-      "id": "jd_fruit",
-      "name": "东东农场修改版",
+      "id": "jd_fruit2",
+      "name": "东东农场2",
       "keys": [
         "jd_fruit_name",
-        "jd_fruit1",
-        "jd_fruit2",
-        "jd_fruit3",
-        "jd_fruit4",
         "jd_fruit5",
         "jd_fruit6",
         "jd_fruit7",
@@ -35,34 +31,6 @@
           "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
         },
         {
-          "id": "jd_fruit1",
-          "name": "互助码1",
-          "val": "",
-          "type": "text",
-          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_fruit2",
-          "name": "互助码2",
-          "val": "",
-          "type": "text",
-          "desc": "京东水果互助码."
-        },
-        {
-          "id": "jd_fruit3",
-          "name": "互助码3",
-          "val": "",
-          "type": "text",
-          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_fruit4",
-          "name": "互助码4",
-          "val": "",
-          "type": "text",
-          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
           "id": "jd_fruit5",
           "name": "互助码2-1",
           "val": "",
@@ -74,7 +42,7 @@
           "name": "互助码2-2",
           "val": "",
           "type": "text",
-          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+          "desc": "京东水果互助码."
         },
         {
           "id": "jd_fruit7",
@@ -91,24 +59,19 @@
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
         }
       ],
-   "author": "@lxk0301",
+      "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
+      "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_fruit.png"
       ]
     },
     {
-      "id": "jd_pet",
-      "name": "东东萌宠修改版",
+      "id": "jd_pet2",
+      "name": "东东萌宠2",
       "keys": [
         "jd_pet_name",
-        "jd_pet1",
-        "jd_pet2",
-        "jd_pet3",
-        "jd_pet4",
-        "jd_pet5",
         "jd_pet6",
         "jd_pet7",
         "jd_pet8",
@@ -129,41 +92,6 @@
           "val": "",
           "type": "text",
           "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
-        },
-        {
-          "id": "jd_pet1",
-          "name": "互助码1",
-          "val": "",
-          "type": "text",
-          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_pet2",
-          "name": "互助码2",
-          "val": "",
-          "type": "text",
-          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_pet3",
-          "name": "互助码3",
-          "val": "",
-          "type": "text",
-          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_pet4",
-          "name": "互助码4",
-          "val": "",
-          "type": "text",
-          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "jd_pet5",
-          "name": "互助码5",
-          "val": "",
-          "type": "text",
-          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
         },
         {
           "id": "jd_pet6",
@@ -195,28 +123,25 @@
         },
         {
           "id": "jd_pet10",
-          "name": "互助码2-5byAir",
+          "name": "互助码2-5",
           "val": "",
           "type": "text",
           "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
         }
       ],
-       "author": "@lxk0301",
+      "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
+      "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png"
       ]
     },
     {
-      "id": "jd_plantBean",
-      "name": "京东种豆修改版",
+      "id": "jd_plantBean2",
+      "name": "京东种豆2",
       "keys": [
         "jd_plant_bean_name",
-        "jd_plantBean1",
-        "jd_plantBean2",
-        "jd_plantBean3",
         "jd_plantBean4",
         "jd_plantBean5",
         "jd_plantBean6"
@@ -235,27 +160,6 @@
           "val": "",
           "type": "text",
           "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
-        },
-        {
-          "id": "jd_plantBean1",
-          "name": "互助码1",
-          "val": "",
-          "type": "text",
-          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
-        },
-        {
-          "id": "jd_plantBean2",
-          "name": "互助码2",
-          "val": "",
-          "type": "text",
-          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
-        },
-        {
-          "id": "jd_plantBean3",
-          "name": "互助码3",
-          "val": "",
-          "type": "text",
-          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
         },
         {
           "id": "jd_plantBean4",
@@ -281,77 +185,16 @@
       ],
       "author": "@uniqueque",
       "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
+      "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean2.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_plantBean.png"
       ]
     },
-     {
-      "id": "jd_MoneyTree",
-      "name": "宠汪汪修改版",
-      "keys": [
-        "jd_joy_name"
-      ],
-      "settings": [
-        {
-          "id": "jdJoyNotify",
-          "name": "静默运行",
-          "val": false,
-          "type": "boolean",
-          "desc": "运行宠汪汪脚本时不发出系统弹窗通知"
-        },
-        {
-          "id": "jd_joy_name",
-          "name": "京东账号昵称",
-          "val": "",
-          "type": "text",
-          "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
-        }
-      ],
-      "author": "@uniqueque",
-      "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_joy.js",
-      "icons": [
-        "https://raw.githubusercontent.com/58xinian/icon/master/jdcww_mini.png",
-        "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_joy.png"
-      ]
-    },
     {
-      "id": "jd_MoneyTree",
-      "name": "京东摇钱树",
-      "keys": [
-        "jd_money_tree_name"
-      ],
-      "settings": [
-        {
-          "id": "jdMoneyTreeNotify",
-          "name": "静默运行",
-          "val": false,
-          "type": "boolean",
-          "desc": "运行京东摇钱树脚本时不发出系统弹窗通知"
-        },
-        {
-          "id": "jd_money_tree_name",
-          "name": "京东账号昵称",
-          "val": "",
-          "type": "text",
-          "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
-        }
-      ],
-      "author": "@lxk0301",
-      "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_moneyTree.js",
-      "icons": [
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/moneyTree.png",
-        "https://raw.githubusercontent.com/znz1992/Gallery/master/moneyTree.png"
-      ]
-    },
-    {
-      "id": "jd_Speed",
-      "name": "京东天天加速修改版",
-      "keys": [
-        "jd_speed_name"
-      ],
+      "id": "jd_Speed2",
+      "name": "京东天天加速2",
+      "keys": [],
       "settings": [
         {
           "id": "jdSpeedNotify",
@@ -359,18 +202,11 @@
           "val": false,
           "type": "boolean",
           "desc": "运行京东天天加速脚本时不发出系统弹窗通知"
-        },
-        {
-          "id": "jd_speed_name",
-          "name": "京东账号昵称",
-          "val": "",
-          "type": "text",
-          "desc": "京东账号昵称,用于区分自己的京东账号(非必填，建议多个京东账号使用)"
         }
       ],
-     "author": "@lxk0301",
+      "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
+      "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js",
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdjs_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_speed.png"
