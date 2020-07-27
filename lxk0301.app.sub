@@ -17,8 +17,7 @@
         "jd_fruit5",
         "jd_fruit6",
         "jd_fruit7",
-        "jd_fruit8",
-        "notifyInterval"
+        "jd_fruit8"
       ],
       "settings": [
         {
@@ -90,17 +89,21 @@
           "val": "",
           "type": "text",
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
-        },
-        {
-          "id": "notifyInterval",
-          "name": "中青",
-          "val": "",
-          "type": "text",
-          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
         }
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
+      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js",
+      "scripts": [
+        {
+          "name": "账号一京东水果",
+          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_fruit.js"
+        },
+        {
+          "name": "账号二京东水果",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png",
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdsg.png"
@@ -210,6 +213,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
+      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js",
+      "scripts": [
+        {
+          "name": "账号一京东萌宠",
+          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_pet.js"
+        },
+        {
+          "name": "账号二京东萌宠",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png",
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdmc.png"
@@ -287,6 +301,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
+      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_plantBean.js",
+      "scripts": [
+        {
+          "name": "账号一京东种豆",
+          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_plantBend.js"
+        },
+        {
+          "name": "账号二京东种豆",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBend2.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png",
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdzd.png"
@@ -374,6 +399,17 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
+      "script"："https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js",
+      "scripts": [
+        {
+          "name": "账号一京东加速",
+          "script": "https://gitee.com/lxk0301/scripts/raw/master/jd_speed.js"
+        },
+        {
+          "name": "账号二京东加速",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png",
         "https://raw.githubusercontent.com/znz1992/Gallery/master/jdttjs.png"
