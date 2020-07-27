@@ -11,7 +11,7 @@
     "author": "改自@chavybox",
     "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
     "script"："https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
-      "scripts": [
+    "scripts": [
         {
           "name": "开红包版本",
           "script": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js"
