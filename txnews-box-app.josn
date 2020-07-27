@@ -11,5 +11,12 @@
     "author": "改自@chavybox",
     "repo": "https://github.com/Sunert/Scripts/blob/master/Task/txnews.js",
     "icons": ["https://raw.githubusercontent.com/Orz-3/task/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"]
-  }]
+  },
+        {
+          "id": "notifyInterval",
+          "name": "中青看点通知间隔",
+          "val": "",
+          "type": "text",
+          "desc": "测试."
+        }]
 }
