@@ -452,7 +452,7 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
-      //"script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_speed.js",
+      "script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_speed.js",
        "scripts": [
         {
           "name": "加速1",
