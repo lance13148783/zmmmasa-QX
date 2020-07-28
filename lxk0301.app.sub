@@ -66,7 +66,7 @@
           "type": "text",
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
         }
-      ],{
+      ,{
           "id": "jd_fruit11",
           "name": "互助码3-1",
           "val": "",
@@ -94,7 +94,7 @@
           "type": "text",
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
         }
-      ],{
+      ,{
           "id": "jd_fruit21",
           "name": "互助码4-1",
           "val": "",
