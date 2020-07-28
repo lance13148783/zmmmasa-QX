@@ -13,7 +13,15 @@
         "jd_fruit5",
         "jd_fruit6",
         "jd_fruit7",
-        "jd_fruit8"
+        "jd_fruit8",
+        "jd_fruit11",
+        "jd_fruit12",
+        "jd_fruit13",
+        "jd_fruit14",
+        "jd_fruit21",
+        "jd_fruit22",
+        "jd_fruit23",
+        "jd_fruit24"
       ],
       "settings": [
         {
@@ -58,6 +66,62 @@
           "type": "text",
           "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
         }
+      ],{
+          "id": "jd_fruit11",
+          "name": "互助码3-1",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_fruit12",
+          "name": "互助码3-2",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码."
+        },
+        {
+          "id": "jd_fruit13",
+          "name": "互助码3-3",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_fruit14",
+          "name": "互助码3-4",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        }
+      ],{
+          "id": "jd_fruit21",
+          "name": "互助码4-1",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_fruit22",
+          "name": "互助码4-2",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码."
+        },
+        {
+          "id": "jd_fruit23",
+          "name": "互助码4-3",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_fruit24",
+          "name": "互助码4-4",
+          "val": "",
+          "type": "text",
+          "desc": "京东水果互助码.这是别人的shareCode,你帮别人助力."
+        }
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
@@ -86,7 +150,17 @@
         "jd_pet7",
         "jd_pet8",
         "jd_pet9",
-        "jd_pet10"
+        "jd_pet10",
+        "jd_pet11",
+        "jd_pet12",
+        "jd_pet13",
+        "jd_pet14",
+        "jd_pet15",
+        "jd_pet21",
+        "jd_pet22",
+        "jd_pet23",
+        "jd_pet24",
+        "jd_pet25"
       ],
       "settings": [
         {
@@ -137,6 +211,76 @@
           "val": "",
           "type": "text",
           "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet11",
+          "name": "互助码3-1",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet12",
+          "name": "互助码3-2",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet13",
+          "name": "互助码3-3",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet14",
+          "name": "互助码3-4",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet15",
+          "name": "互助码3-5",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet21",
+          "name": "互助码4-1",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet22",
+          "name": "互助码4-2",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet23",
+          "name": "互助码4-3",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet24",
+          "name": "互助码4-4",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
+        },
+        {
+          "id": "jd_pet25",
+          "name": "互助码4-5",
+          "val": "",
+          "type": "text",
+          "desc": "东东萌宠互助码.这是别人的shareCode,你帮别人助力."
         }
       ],
       "author": "@lxk0301",
@@ -164,7 +308,13 @@
         "jd_plant_bean_name",
         "jd_plantBean4",
         "jd_plantBean5",
-        "jd_plantBean6"
+        "jd_plantBean6",
+        "jd_plantBean11",
+        "jd_plantBean12",
+        "jd_plantBean13",
+        "jd_plantBean21",
+        "jd_plantBean22",
+        "jd_plantBean23"
       ],
       "settings": [
         {
@@ -198,6 +348,48 @@
         {
           "id": "jd_plantBean6",
           "name": "互助码2-3",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean11",
+          "name": "互助码3-1",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean12",
+          "name": "互助码3-2",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean13",
+          "name": "互助码3-3",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean21",
+          "name": "互助码4-1",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean22",
+          "name": "互助码4-2",
+          "val": "",
+          "type": "text",
+          "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
+        },
+        {
+          "id": "jd_plantBean23",
+          "name": "互助码4-3",
           "val": "",
           "type": "text",
           "desc": "种豆得豆互助码.这是别人的助力码,你帮别人助力."
