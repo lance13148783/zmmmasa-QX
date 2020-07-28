@@ -127,6 +127,14 @@
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js",
        "scripts": [
+         {
+          "name": "水果1",
+          "script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_fruit.js"
+        },
+         {
+          "name": "水果2",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js"
+        },
         {
           "name": "水果3",
           "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit3.js"
@@ -288,6 +296,14 @@
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js",
        "scripts": [
         {
+          "name": "萌宠1",
+          "script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_pet.js"
+        },
+         {
+          "name": "萌宠2",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js"
+        },
+        {
           "name": "萌宠3",
           "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet3.js"
         },
@@ -399,6 +415,14 @@
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean2.js",
        "scripts": [
+         {
+          "name": "种豆1",
+          "script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_plantBean.js"
+        },
+        {
+          "name": "种豆2",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean2.js"
+        }, 
         {
           "name": "种豆3",
           "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean3.js"
@@ -428,8 +452,16 @@
       ],
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
-      "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js",
+      //"script": "https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jd_speed.js",
        "scripts": [
+        {
+          "name": "加速1",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed3.js"
+        },
+         {
+          "name": "加速2",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js"
+        },
         {
           "name": "加速3",
           "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed3.js"
