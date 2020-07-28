@@ -62,6 +62,16 @@
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit2.js",
+       "scripts": [
+        {
+          "name": "水果3",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit3.js"
+        },
+        {
+          "name": "水果4",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-fruit4.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_fruit.png"
@@ -132,6 +142,16 @@
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet2.js",
+       "scripts": [
+        {
+          "name": "萌宠3",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet3.js"
+        },
+        {
+          "name": "萌宠4",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd-pet4.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc_mini.png",
         "https://raw.githubusercontent.com/58xinian/icon/master/jdmc.png"
@@ -186,6 +206,16 @@
       "author": "@uniqueque",
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean2.js",
+       "scripts": [
+        {
+          "name": "种豆3",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean3.js"
+        },
+        {
+          "name": "种豆4",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_plantBean4.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdzd_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_plantBean.png"
@@ -207,6 +237,16 @@
       "author": "@lxk0301",
       "repo": "https://gitee.com/lxk0301/scripts",
       "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed2.js",
+       "scripts": [
+        {
+          "name": "加速3",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed3.js"
+        },
+        {
+          "name": "加速4",
+          "script": "https://raw.githubusercontent.com/zmmmasa/QX/master/jd_speed4.js"
+        }
+      ],
       "icons": [
         "https://raw.githubusercontent.com/58xinian/icon/master/jdjs_mini.png",
         "https://gitee.com/lxk0301/scripts/raw/master/icon/jd_speed.png"
