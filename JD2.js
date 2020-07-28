@@ -1,14 +1,18 @@
 /*************************
+
 京东多合一签到脚本
-更新时间: 2020.7.18 17:20 v1.29
+
+更新时间: 2020.7.26 19:00 v1.30
 有效接口: 24+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 电报频道: @NobyDa 
 问题反馈: @NobyDa_bot 
 如果转载: 请注明出处
+
 *************************
 【 JSbox, Node.js 说明 】 :
 *************************
+
 开启抓包app后, Safari浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历后, 返回抓包app搜索关键字 functionId=signBean 复制请求头Cookie填入以下Key处的单引号内即可 */
 
 var Key = ''; //单引号内自行填写您抓取的Cookie
@@ -20,48 +24,67 @@ var DualKey = ''; //如需双账号签到,此处单引号内填写抓取的"账�
    注3: 如果复制的Cookie开头为"Cookie: "请把它删除后填入.
    注4: 如果使用QX,Surge,Loon并获取Cookie后, 再重复填写以上选项, 则签到优先读取以上Cookie.
    注5: 如果使用Node.js, 需自行安装'request'模块. 例: npm install request -g
+
 *************************
 【 QX, Surge, Loon 说明 】 :
 *************************
+
 初次使用时, app配置文件添加脚本配置,并启用Mitm后, Safari浏览器打开登录 https://bean.m.jd.com ,点击签到并且出现签到日历后, 如果通知获得cookie成功, 则可以使用此签到脚本。 注: 请勿在京东APP内获取!!!
+
 由于cookie的有效性(经测试网页Cookie有效周期最长31天)，如果脚本后续弹出cookie无效的通知，则需要重复上述步骤。 
 签到脚本将在每天的凌晨0:05执行, 您可以修改执行时间。 因部分接口京豆限量领取, 建议调整为凌晨签到。
+
 BoxJs订阅地址: https://raw.githubusercontent.com/NobyDa/Script/master/NobyDa_BoxJs.json
+
 *************************
 【 配置双京东账号签到说明 】 : 
 *************************
+
 正确配置QX、Surge、Loon后, 并使用此脚本获取"账号1"Cookie成功后, 请勿点击退出账号(可能会导致Cookie失效), 需清除浏览器资料或更换浏览器登录"账号2"获取即可.
+
 注: 获取"账号1"或"账号2"的Cookie后, 后续仅可更新该"账号1"或"账号2"的Cookie.
 如需写入其他账号,您可开启脚本内"DeleteCookie"选项以清除Cookie
 *************************
 【Surge 4.2+ 脚本配置】:
 *************************
+
 [Script]
 京东多合一签到 = type=cron,cronexp=5 0 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 [MITM]
 hostname = api.m.jd.com
+
 *************************
 【Loon 2.1+ 脚本配置】:
 *************************
+
 [Script]
 cron "5 0 * * *" tag=京东多合一签到, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean tag=获取京东Cookie, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
 [MITM]
 hostname = api.m.jd.com
+
 *************************
 【 QX 1.0.5+ 脚本配置 】 :
 *************************
+
 [task_local]
 # 京东多合一签到
 # 注意此为本地路径, 请根据实际情况自行调整
 5 0 * * * JD_DailyBonus.js
+
 [rewrite_local]
 # 获取京东Cookie. 
 # 注意此为本地路径, 请根据实际情况自行调整.
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header JD_DailyBonus.js
+
 [mitm]
 hostname = api.m.jd.com
+
 *************************/
 
 var LogDetails = false; //是否开启响应日志, true则开启
@@ -1069,11 +1092,40 @@ function JingDongCash(s) {
 }
 
 function JDMagicCube(s) {
+  return new Promise((resolve, reject) => {
+    if (disable("JDCube")) return reject()
+    const JDUrl = {
+      url: 'https://api.m.jd.com/client.action?functionId=getNewsInteractionInfo&appid=smfe',
+      headers: {
+        Cookie: KEY,
+      }
+    };
+    $nobyda.get(JDUrl, function(error, response, data) {
+      try {
+        if (!error && data.match(/\"interactionId\":\d+/)) {
+          const Details = LogDetails ? "response:\n" + data : '';
+          merge.JDCube.key = data.match(/\"interactionId\":(\d+)/)[1]
+          console.log("\n京东魔方-查询活动成功 " + Details)
+        } else {
+          console.log("\n京东魔方-查询活动失败 ")
+        }
+      } catch (eor) {
+        $nobyda.notify("京东魔方-查询" + eor.name + "‼️", JSON.stringify(eor), eor.message)
+      } finally {
+        resolve(merge.JDCube.key)
+      }
+    })
+    if (out) setTimeout(reject, out + s)
+  }).then(data => {
+    return JDMagicCubeSign(s, data)
+  }, () => {});
+}
+
+function JDMagicCubeSign(s, id) {
   return new Promise(resolve => {
-    if (disable("JDCube")) return resolve()
     setTimeout(() => {
       const JDMCUrl = {
-        url: 'https://api.m.jd.com/client.action?functionId=getNewsInteractionLotteryInfo&appid=smfe',
+        url: `https://api.m.jd.com/client.action?functionId=getNewsInteractionLotteryInfo&${id ? `body=%7B%22interactionId%22%3A${id}%2C%22taskPoolId%22%3A-1%2C%22sign%22%3A2%7D&appid=content_ecology` : `appid=smfe`}`,
         headers: {
           Cookie: KEY,
         }
@@ -1789,6 +1841,7 @@ function disable(name) {
     return false
   }
 }
+
 function initial() {
 
   acData = {
