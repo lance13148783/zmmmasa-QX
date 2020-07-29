@@ -223,17 +223,17 @@ function ReadCookie() {
   DualAccount = true;
   if (DeleteCookie) {
     if ($nobyda.isJSBox) {
-      if ($file.exists("shared://JD_Cookie3.txt")) {
-        if ($file.exists("shared://JD_Cookie4.txt")) {
-          $file.delete("shared://JD_Cookie4.txt")
+      if ($file.exists("shared://JD_Cookie.txt")) {
+        if ($file.exists("shared://JD_Cookie2.txt")) {
+          $file.delete("shared://JD_Cookie2.txt")
         }
-        $file.delete("shared://JD_Cookie3.txt")
+        $file.delete("shared://JD_Cookie.txt")
         $nobyda.notify("京东Cookie清除成功 !", "", '请手动关闭脚本内"DeleteCookie"选项')
         return
       }
-    } else if ($nobyda.read("CookieJD")) {
-      $nobyda.write("", "CookieJD")
-      $nobyda.write("", "CookieJD2")
+    } else if ($nobyda.read("CookieJD3")) {
+      $nobyda.write("", "CookieJD3")
+      $nobyda.write("", "CookieJD4")
       $nobyda.notify("京东Cookie清除成功 !", "", '请手动关闭脚本内"DeleteCookie"选项')
       $nobyda.done()
       return
@@ -246,13 +246,13 @@ function ReadCookie() {
     return
   }
   if ($nobyda.isJSBox) {
-    add = DualKey || $file.exists("shared://JD_Cookie4.txt") ? true : false
+    add = DualKey || $file.exists("shared://JD_Cookie2.txt") ? true : false
     if (DualKey) {
       $file.write({
         data: $data({
           string: DualKey
         }),
-        path: "shared://JD_Cookie4.txt"
+        path: "shared://JD_Cookie2.txt"
       })
     }
     if (Key) {
@@ -260,19 +260,19 @@ function ReadCookie() {
         data: $data({
           string: Key
         }),
-        path: "shared://JD_Cookie3.txt"
+        path: "shared://JD_Cookie.txt"
       })
       KEY = Key
       all()
-    } else if ($file.exists("shared://JD_Cookie3.txt")) {
-      KEY = $file.read("shared://JD_Cookie3.txt").string
+    } else if ($file.exists("shared://JD_Cookie.txt")) {
+      KEY = $file.read("shared://JD_Cookie.txt").string
       all()
     } else {
       $nobyda.notify("京东签到", "", "脚本终止, 未填写Cookie ‼️")
     }
-  } else if (Key || $nobyda.read("CookieJD")) {
-    add = DualKey || $nobyda.read("CookieJD2") ? true : false
-    KEY = Key ? Key : $nobyda.read("CookieJD")
+  } else if (Key || $nobyda.read("CookieJD3")) {
+    add = DualKey || $nobyda.read("CookieJD4") ? true : false
+    KEY = Key ? Key : $nobyda.read("CookieJD3")
     out = $nobyda.read("JD_DailyBonusTimeOut") || out
     stop = $nobyda.read("JD_DailyBonusDelay") || stop
     LogDetails = $nobyda.read("JD_DailyBonusLog") === "true" ? true : false || LogDetails
@@ -288,14 +288,14 @@ function double() {
   add = true
   DualAccount = false
   if ($nobyda.isJSBox) {
-    if (DualKey || $file.exists("shared://JD_Cookie4.txt")) {
-      KEY = DualKey ? DualKey : $file.read("shared://JD_Cookie4.txt").string
+    if (DualKey || $file.exists("shared://JD_Cookie2.txt")) {
+      KEY = DualKey ? DualKey : $file.read("shared://JD_Cookie2.txt").string
       all()
     } else {
       $nobyda.time();
     }
-  } else if (DualKey || $nobyda.read("CookieJD2")) {
-    KEY = DualKey ? DualKey : $nobyda.read("CookieJD2")
+  } else if (DualKey || $nobyda.read("CookieJD4")) {
+    KEY = DualKey ? DualKey : $nobyda.read("CookieJD4")
     all()
   } else {
     $nobyda.time();
@@ -1952,18 +1952,18 @@ function GetCookie() {
       var CV = $request.headers['Cookie']
       if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
         var CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/)
-        var CK1 = $nobyda.read("CookieJD")
-        var CK2 = $nobyda.read("CookieJD2")
+        var CK1 = $nobyda.read("CookieJD3")
+        var CK2 = $nobyda.read("CookieJD4")
         var AccountOne = CK1 ? CK1.match(/pt_pin=.+?;/) ? CK1.match(/pt_pin=(.+?);/)[1] : null : null
         var AccountTwo = CK2 ? CK2.match(/pt_pin=.+?;/) ? CK2.match(/pt_pin=(.+?);/)[1] : null : null
         var UserName = CookieValue.match(/pt_pin=(.+?);/)[1]
         var DecodeName = decodeURIComponent(UserName)
         if (!AccountOne || UserName == AccountOne) {
           var CookieName = " [账号一] ";
-          var CookieKey = "CookieJD";
+          var CookieKey = "CookieJD3";
         } else if (!AccountTwo || UserName == AccountTwo) {
           var CookieName = " [账号二] ";
-          var CookieKey = "CookieJD2";
+          var CookieKey = "CookieJD4";
         } else {
           $nobyda.notify("更新京东Cookie失败", "非历史写入账号 ‼️", '请开启脚本内"DeleteCookie"以清空Cookie ‼️')
           $nobyda.done()
@@ -1997,8 +1997,8 @@ function GetCookie() {
       $nobyda.notify("写入京东Cookie失败", "", "请检查匹配URL或配置内脚本类型 ‼️");
     }
   } catch (eor) {
-    $nobyda.write("", "CookieJD")
-    $nobyda.write("", "CookieJD2")
+    $nobyda.write("", "CookieJD3")
+    $nobyda.write("", "CookieJD4")
     $nobyda.notify("写入京东Cookie失败", "", '已尝试清空历史Cookie, 请重试 ⚠️')
     console.log(JSON.stringify(eor) + "\n" + eor + "\n" + JSON.stringify($request.headers))
   }
