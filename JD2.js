@@ -2,7 +2,7 @@
 
 京东多合一签到脚本
 
-更新时间: 2020.7.26 19:00 v1.30
+更新时间: 2020.7.29 8:30 v1.31
 有效接口: 24+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 电报频道: @NobyDa 
@@ -223,17 +223,17 @@ function ReadCookie() {
   DualAccount = true;
   if (DeleteCookie) {
     if ($nobyda.isJSBox) {
-      if ($file.exists("shared://JD_Cookie.txt")) {
-        if ($file.exists("shared://JD_Cookie2.txt")) {
-          $file.delete("shared://JD_Cookie2.txt")
+      if ($file.exists("shared://JD_Cookie3.txt")) {
+        if ($file.exists("shared://JD_Cookie4.txt")) {
+          $file.delete("shared://JD_Cookie4.txt")
         }
-        $file.delete("shared://JD_Cookie.txt")
+        $file.delete("shared://JD_Cookie3.txt")
         $nobyda.notify("京东Cookie清除成功 !", "", '请手动关闭脚本内"DeleteCookie"选项')
         return
       }
-    } else if ($nobyda.read("CookieJD3")) {
-      $nobyda.write("", "CookieJD3")
-      $nobyda.write("", "CookieJD4")
+    } else if ($nobyda.read("CookieJD")) {
+      $nobyda.write("", "CookieJD")
+      $nobyda.write("", "CookieJD2")
       $nobyda.notify("京东Cookie清除成功 !", "", '请手动关闭脚本内"DeleteCookie"选项')
       $nobyda.done()
       return
@@ -246,13 +246,13 @@ function ReadCookie() {
     return
   }
   if ($nobyda.isJSBox) {
-    add = DualKey || $file.exists("shared://JD_Cookie2.txt") ? true : false
+    add = DualKey || $file.exists("shared://JD_Cookie4.txt") ? true : false
     if (DualKey) {
       $file.write({
         data: $data({
           string: DualKey
         }),
-        path: "shared://JD_Cookie2.txt"
+        path: "shared://JD_Cookie4.txt"
       })
     }
     if (Key) {
@@ -260,19 +260,19 @@ function ReadCookie() {
         data: $data({
           string: Key
         }),
-        path: "shared://JD_Cookie.txt"
+        path: "shared://JD_Cookie3.txt"
       })
       KEY = Key
       all()
-    } else if ($file.exists("shared://JD_Cookie.txt")) {
-      KEY = $file.read("shared://JD_Cookie.txt").string
+    } else if ($file.exists("shared://JD_Cookie3.txt")) {
+      KEY = $file.read("shared://JD_Cookie3.txt").string
       all()
     } else {
       $nobyda.notify("京东签到", "", "脚本终止, 未填写Cookie ‼️")
     }
-  } else if (Key || $nobyda.read("CookieJD3")) {
-    add = DualKey || $nobyda.read("CookieJD4") ? true : false
-    KEY = Key ? Key : $nobyda.read("CookieJD3")
+  } else if (Key || $nobyda.read("CookieJD")) {
+    add = DualKey || $nobyda.read("CookieJD2") ? true : false
+    KEY = Key ? Key : $nobyda.read("CookieJD")
     out = $nobyda.read("JD_DailyBonusTimeOut") || out
     stop = $nobyda.read("JD_DailyBonusDelay") || stop
     LogDetails = $nobyda.read("JD_DailyBonusLog") === "true" ? true : false || LogDetails
@@ -288,14 +288,14 @@ function double() {
   add = true
   DualAccount = false
   if ($nobyda.isJSBox) {
-    if (DualKey || $file.exists("shared://JD_Cookie2.txt")) {
-      KEY = DualKey ? DualKey : $file.read("shared://JD_Cookie2.txt").string
+    if (DualKey || $file.exists("shared://JD_Cookie4.txt")) {
+      KEY = DualKey ? DualKey : $file.read("shared://JD_Cookie4.txt").string
       all()
     } else {
       $nobyda.time();
     }
-  } else if (DualKey || $nobyda.read("CookieJD4")) {
-    KEY = DualKey ? DualKey : $nobyda.read("CookieJD4")
+  } else if (DualKey || $nobyda.read("CookieJD2")) {
+    KEY = DualKey ? DualKey : $nobyda.read("CookieJD2")
     all()
   } else {
     $nobyda.time();
@@ -379,11 +379,46 @@ function JingDongBean(s) {
 }
 
 function JingDongTurn(s) {
+  return new Promise((resolve, reject) => {
+    if (disable("JDTurn")) return reject()
+    const JDTUrl = {
+      url: 'https://api.m.jd.com/client.action?functionId=wheelSurfIndex&body=%7B%22actId%22%3A%22jgpqtzjhvaoym%22%2C%22appSource%22%3A%22jdhome%22%7D&appid=ld',
+      headers: {
+        Cookie: KEY,
+      }
+    };
+    $nobyda.get(JDTUrl, async function(error, response, data) {
+      try {
+        if (error) {
+          merge.JDTurn.notify = "\n京东商城-转盘: 登录接口请求失败 ‼️‼️"
+          merge.JDTurn.fail = 1
+        } else {
+          const cc = JSON.parse(data).data.lotteryCode
+          const Details = LogDetails ? "response:\n" + data : '';
+          if (cc) {
+            console.log("\n" + "京东商城-转盘查询成功 " + Details)
+            return resolve(cc)
+          } else {
+            console.log("\n" + "京东商城-转盘查询失败 " + Details)
+          }
+        }
+      } catch (eor) {
+        $nobyda.notify("京东转盘-登录" + eor.name + "‼️", JSON.stringify(eor), eor.message)
+      } finally {
+        reject()
+      }
+    })
+    if (out) setTimeout(reject, out + s)
+  }).then(data => {
+    return JingDongTurnSign(s, data);
+  }, () => {});
+}
+
+function JingDongTurnSign(s, code) {
   return new Promise(resolve => {
-    if (disable("JDTurn")) return resolve()
     setTimeout(() => {
       const JDTUrl = {
-        url: 'https://api.m.jd.com/client.action?functionId=lotteryDraw&body=%7B%22actId%22%3A%22jgpqtzjhvaoym%22%2C%22appSource%22%3A%22jdhome%22%2C%22lotteryCode%22%3A%224wwzdq7wkqx2usx4g5i2nu5ho4auto4qxylblkxacm7jqdsltsepmgpn3b2hgyd7hiawzpccizuck%22%7D&appid=ld',
+        url: `https://api.m.jd.com/client.action?functionId=lotteryDraw&body=%7B%22actId%22%3A%22jgpqtzjhvaoym%22%2C%22appSource%22%3A%22jdhome%22%2C%22lotteryCode%22%3A%22${code}%22%7D&appid=ld`,
         headers: {
           Cookie: KEY,
         }
@@ -411,7 +446,7 @@ function JingDongTurn(s) {
                   merge.JDTurn.success += 1
                   merge.JDTurn.bean += Number(cc.data.prizeSendNumber)
                   if (cc.data.chances != "0") {
-                    await JingDongTurn(2000)
+                    await JingDongTurnSign(2000, code)
                   }
                 } else {
                   console.log("\n" + "京东商城-转盘签到失败 " + Details)
@@ -419,7 +454,7 @@ function JingDongTurn(s) {
                     merge.JDTurn.notify += merge.JDTurn.notify ? "\n京东商城-转盘: 成功, 状态: 未中奖 🐶 (多次)" : "京东商城-转盘: 成功, 状态: 未中奖 🐶"
                     merge.JDTurn.success += 1
                     if (cc.data.chances != "0") {
-                      await JingDongTurn(2000)
+                      await JingDongTurnSign(2000, code)
                     }
                   } else if (data.match(/(T215|次数为0)/)) {
                     merge.JDTurn.notify = "京东商城-转盘: 失败, 原因: 已转过 ⚠️"
@@ -514,9 +549,9 @@ function JRBeanCheckin(s) {
             if (data.match(/\"resultCode\":\"00000\"/)) {
               console.log("\n" + "京东金融-京豆签到成功 " + Details)
               if (c.resultData.data.rewardAmount != "0") {
-                merge.JRBean.notify = "京东金融-京豆: 成功, 明细: " + c.resultData.data.rewardAmount + "京豆 🐶"
+                merge.JRBean.notify = "京东金融-京豆: 成功, 明细: " + c.resultData.data.rewardAmount + "金贴 🐶"
                 merge.JRBean.success = 1
-                merge.JRBean.bean = c.resultData.data.rewardAmount
+                //merge.JRBean.bean = c.resultData.data.rewardAmount
               } else {
                 merge.JRBean.notify = "京东金融-京豆: 成功, 明细: 无奖励 🐶"
                 merge.JRBean.success = 1
@@ -1125,7 +1160,7 @@ function JDMagicCubeSign(s, id) {
   return new Promise(resolve => {
     setTimeout(() => {
       const JDMCUrl = {
-        url: `https://api.m.jd.com/client.action?functionId=getNewsInteractionLotteryInfo&${id ? `body=%7B%22interactionId%22%3A${id}%2C%22taskPoolId%22%3A-1%2C%22sign%22%3A2%7D&appid=content_ecology` : `appid=smfe`}`,
+        url: `https://api.m.jd.com/client.action?functionId=getNewsInteractionLotteryInfo&appid=smfe${id ? `&body=%7B%22interactionId%22%3A${id}%7D` : ``}`,
         headers: {
           Cookie: KEY,
         }
@@ -1917,18 +1952,18 @@ function GetCookie() {
       var CV = $request.headers['Cookie']
       if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
         var CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/)
-        var CK1 = $nobyda.read("CookieJD3")
-        var CK2 = $nobyda.read("CookieJD4")
+        var CK1 = $nobyda.read("CookieJD")
+        var CK2 = $nobyda.read("CookieJD2")
         var AccountOne = CK1 ? CK1.match(/pt_pin=.+?;/) ? CK1.match(/pt_pin=(.+?);/)[1] : null : null
         var AccountTwo = CK2 ? CK2.match(/pt_pin=.+?;/) ? CK2.match(/pt_pin=(.+?);/)[1] : null : null
         var UserName = CookieValue.match(/pt_pin=(.+?);/)[1]
         var DecodeName = decodeURIComponent(UserName)
         if (!AccountOne || UserName == AccountOne) {
           var CookieName = " [账号一] ";
-          var CookieKey = "CookieJD3";
+          var CookieKey = "CookieJD";
         } else if (!AccountTwo || UserName == AccountTwo) {
           var CookieName = " [账号二] ";
-          var CookieKey = "CookieJD4";
+          var CookieKey = "CookieJD2";
         } else {
           $nobyda.notify("更新京东Cookie失败", "非历史写入账号 ‼️", '请开启脚本内"DeleteCookie"以清空Cookie ‼️')
           $nobyda.done()
@@ -1962,8 +1997,8 @@ function GetCookie() {
       $nobyda.notify("写入京东Cookie失败", "", "请检查匹配URL或配置内脚本类型 ‼️");
     }
   } catch (eor) {
-    $nobyda.write("", "CookieJD3")
-    $nobyda.write("", "CookieJD4")
+    $nobyda.write("", "CookieJD")
+    $nobyda.write("", "CookieJD2")
     $nobyda.notify("写入京东Cookie失败", "", '已尝试清空历史Cookie, 请重试 ⚠️')
     console.log(JSON.stringify(eor) + "\n" + eor + "\n" + JSON.stringify($request.headers))
   }
