@@ -2,7 +2,7 @@
 const $ = new Env('天天签到领现金');
 const Key = '';//单引号内自行填写您抓取的京东Cookie
 //直接用NobyDa的jd cookie
-const cookie = Key ? Key : $.getdata('CookieJD2');
+const cookie = Key ? Key : $.getdata('CookieJD3');
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
 !(async () => {
   if (!cookie) {
